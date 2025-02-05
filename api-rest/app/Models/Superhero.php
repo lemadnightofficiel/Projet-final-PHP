@@ -9,9 +9,6 @@ class Superhero extends Model
 {
     use HasFactory;
 
-    /**
-     * Les attributs assignables en masse.
-     */
     protected $fillable = [
         'real_name',
         'pseudo_name',
@@ -26,17 +23,11 @@ class Superhero extends Model
         'user_id',
     ];
 
-    /**
-     * Les attributs qui doivent être castés.
-     */
     protected $casts = [
         'superpowers' => 'array',
         'gadgets' => 'array',
     ];
 
-    /**
-     * Relation : un superhéros appartient à un utilisateur.
-     */
     public function user()
     {
         return $this->belongsTo(User::class);
