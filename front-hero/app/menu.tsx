@@ -1,9 +1,10 @@
 import React from "react";
-import { View, TextInput, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import { StyleSheet, TextInput, View } from "react-native";
 import HomeScreen from "./index";
 import ListeHeroScreen from "./listehero";
+import CreerTonHeroScreen from "./creation";
 
 const Drawer = createDrawerNavigator();
 
@@ -40,13 +41,13 @@ export default function Menu() {
         name="Accueil"
         component={HomeScreen}
         options={{
-          title: "SUPERHERO", // Affiche SUPERHERO dans la barre
+          title: "SUPERHERO",
           headerStyle: {
-            backgroundColor: "#A00000", // Couleur de la barre
+            backgroundColor: "#A00000",
           },
           headerTitleStyle: {
-            fontWeight: "bold", // Titre en gras
-            color: "white", // Couleur du titre
+            fontWeight: "bold",
+            color: "white",
           },
         }}
       />
@@ -54,14 +55,23 @@ export default function Menu() {
         name="Liste des héros"
         component={ListeHeroScreen}
         options={{
-          title: "LISTE DES HÉROS", // Affiche LISTE DES HÉROS dans la barre
+          title: "LISTE DES HÉROS",
           headerStyle: {
-            backgroundColor: "#A00000", // Couleur de la barre
+            backgroundColor: "#A00000",
           },
           headerTitleStyle: {
-            fontWeight: "bold", // Titre en gras
-            color: "white", // Couleur du titre
+            fontWeight: "bold",
+            color: "white",
           },
+        }}
+      />
+      <Drawer.Screen
+        name="Création de ton héro"
+        component={CreerTonHeroScreen}
+        options={{
+          title: "CRÉE TON HÉRO",
+          headerStyle: { backgroundColor: "#A00000" },
+          headerTitleStyle: { fontWeight: "bold", color: "white" },
         }}
       />
     </Drawer.Navigator>

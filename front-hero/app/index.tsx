@@ -1,14 +1,5 @@
-import React from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  ImageBackground,
-  StyleSheet,
-} from "react-native";
-import { Ionicons } from "@expo/vector-icons";
-import { DrawerScreenProps } from "@react-navigation/drawer";
+import React from "react-native";
+import { StyleSheet, View } from "react-native";
 
 export default function HomeScreen() {
   return (
