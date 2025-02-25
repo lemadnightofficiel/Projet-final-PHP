@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "front-hero",
-    "slug": "front-hero",
+    "name": "superhero-project",
+    "slug": "superhero-project",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
